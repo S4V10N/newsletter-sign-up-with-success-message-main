@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --RED: hsl(4, 100%, 67%);
+    --LIGHT-RED: hsla(4, 100%, 67%, 0.500);
+    --BLUE-800:  hsl(234, 29%, 20%);
+    --BLUE-700: hsl(235, 18%, 26%);
+    --GREY: hsl(0, 0%,58%);
+    --WHITE: hsl(0, 0%, 100%);
+}
+.attribution a { 
+    color: rgb(155, 85, 155);
+    text-decoration: none;
+}
+.attribution{
+    margin: auto;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: var(--LIGHT-RED);
+    height: 4rem;
+    color: var(--WHITE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-wrap: nowrap;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+footer{
+    height: 4rem;
+}
+figcaption{
+    display: none;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    color: var(--BLUE-700);
+    position: relative;
+}
+figure img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+.list{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+form input{
+    display: block;
+}
+legend{
+    font-size: 2.8rem;
+    color: var(--BLUE-800);
+    margin-bottom: 2rem;
+}
+p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 28rem;
+}
+.intro{
+    margin-bottom: 2.5rem;
+    width: 30rem;
+}
+input[type="text"] , input[type="submit"] ,button{
+    width: 33rem;
+    height: 6rem;
+    border-radius: 1rem;
+    display: block;
+}
+label{
+    font-size: 1.3rem;
+    color: var(--BLUE-800);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+}
+.spc{
+    margin-bottom: 4rem;
+}
+form{
+    position: relative;
+    padding-left: calc((100% - 33rem) / 2);
+    background-color: var(--WHITE);
+}
+input[type="text"]{
+    padding-left: 2rem;
+    border: 0.2rem solid var(--GREY);
+    margin-bottom: 3rem;
+}
+.label-row{
+    display: flex;
+    width: 33rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.error{
+    color: red;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: none;
+    transform: translateY(-0.5rem);
+}
+input[type="text"]::placeholder{
+    color: var(--GREY);
+    font-size: 1.7rem;
+}
+input[type="submit"] , button{
+    background-color: var(--BLUE-800);
+    color: var(--WHITE);
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+    border: none;
+}
+.form-submit{
+    padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: calc((100% - 33rem) / 2);
+    display: none;
+}
+.form-submit img{
+    margin-bottom: 4rem;
+    width: 7rem;
+}
+.form-submit h2{
+    font-size: 4rem;
+    width: 21rem;
+    margin-bottom: 3rem;
+}
+.form-submit .textbox p{
+    width: 34rem;
+    line-height: 1.5em;
+}
+.textbox{
+    margin-bottom: 16rem;
+}
+a{
+    text-decoration: none;
+    color: var(--WHITE);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+@media (min-width: 1440px) {
+    body{
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        background-color: var(--BLUE-700);
+    }
+    figure img{
+        display: none;
+    }
+    figure::after{
+        content: "";
+        width: 39rem;
+        height: 56rem;
+        display: block;
+        border-radius: 1rem;
+        background-image: url(assets/images/illustration-sign-up-desktop.svg);
+        margin-right: 2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .form{
+        display: flex;
+        align-items: center;
+        width: max-content;
+        gap: 6rem;
+        background-color: var(--WHITE);
+        height: 60rem;
+        border-radius: 2rem;
+        flex-direction: row-reverse;
+    }
+    form{
+        padding-left: 6rem;
+        height: 100%;
+        padding-top: 6rem;
+        border-radius: 2rem;
+    }
+    input[type="text"]:active ,input[type="text"]:hover{
+        cursor: pointer;
+        color: black;
+        border: 0.2rem solid black;
+    }
+    input[type="submit"]:active ,
+    input[type="submit"]:hover{
+        background-image: linear-gradient(to left, var(--RED),var(--LIGHT-RED));
+        box-shadow: 0 20px 30px var(--LIGHT-RED);
+    }
+    .form-submit{
+        background-color: var(--WHITE);
+        padding: 4rem;
+        padding-left: 6rem;
+        border-radius: 2rem;
+    }
+    .textbox{
+        margin-bottom: 3rem;
+    }
+    button{
+        margin-bottom: 1rem;
+    }
+    button:active ,
+    button:hover{
+        background-image: linear-gradient(to left, var(--RED),var(--LIGHT-RED));
+        box-shadow: 0 20px 30px var(--LIGHT-RED);
+    }
+}
