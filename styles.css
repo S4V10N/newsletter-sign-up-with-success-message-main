@@ -66,6 +66,9 @@ legend{
     color: var(--BLUE-800);
     margin-bottom: 2rem;
 }
+.none {
+    display: none;
+}
 p{
     font-size: 1.6rem;
     font-weight: 500;
@@ -155,6 +158,12 @@ a{
     font-weight: bold;
     font-size: 1.6rem;
 }
+button:active ,
+button:hover, input[type="submit"]:active ,
+input[type="submit"]:hover, #hide-msg:active, #hide-msg:hover{
+    background-image: linear-gradient(to left, var(--RED),var(--LIGHT-RED));
+    box-shadow: 0 20px 30px var(--LIGHT-RED);
+}
 @media (min-width: 1440px) {
     body{
         display: grid;
@@ -184,6 +193,7 @@ a{
         background-color: var(--WHITE);
         height: 60rem;
         border-radius: 2rem;
+        width: max-content;
         flex-direction: row-reverse;
     }
     form{
@@ -197,11 +207,6 @@ a{
         color: black;
         border: 0.2rem solid black;
     }
-    input[type="submit"]:active ,
-    input[type="submit"]:hover{
-        background-image: linear-gradient(to left, var(--RED),var(--LIGHT-RED));
-        box-shadow: 0 20px 30px var(--LIGHT-RED);
-    }
     .form-submit{
         background-color: var(--WHITE);
         padding: 4rem;
@@ -213,10 +218,5 @@ a{
     }
     button{
         margin-bottom: 1rem;
-    }
-    button:active ,
-    button:hover{
-        background-image: linear-gradient(to left, var(--RED),var(--LIGHT-RED));
-        box-shadow: 0 20px 30px var(--LIGHT-RED);
     }
 }
