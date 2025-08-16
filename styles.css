@@ -66,9 +66,6 @@ legend{
     color: var(--BLUE-800);
     margin-bottom: 2rem;
 }
-.none {
-    display: none;
-}
 p{
     font-size: 1.6rem;
     font-weight: 500;
@@ -134,7 +131,6 @@ input[type="submit"] , button{
     display: flex;
     flex-direction: column;
     padding-left: calc((100% - 33rem) / 2);
-    display: none;
 }
 .form-submit img{
     margin-bottom: 4rem;
@@ -163,6 +159,10 @@ button:hover, input[type="submit"]:active ,
 input[type="submit"]:hover, #hide-msg:active, #hide-msg:hover{
     background-image: linear-gradient(to left, var(--RED),var(--LIGHT-RED));
     box-shadow: 0 20px 30px var(--LIGHT-RED);
+    cursor: pointer;
+}
+.none {
+    display: none;
 }
 @media (min-width: 1440px) {
     body{
@@ -219,4 +219,7 @@ input[type="submit"]:hover, #hide-msg:active, #hide-msg:hover{
     button{
         margin-bottom: 1rem;
     }
+    .none {
+    display: none;
+}
 }
